@@ -1,7 +1,8 @@
 const About = () => {
+    console.log("sdfdobject")
     return (
         <>
-            <h4>AB</h4>
+            <h4>About</h4>
         </>
     )
 };
