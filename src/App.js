@@ -6,10 +6,9 @@ import Footer from "./Components/Footer"
 import About from "./Components/About";
 import Error from "./Components/Error";
 import Login from "./Components/Login";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"; // for routing our page import createBrowserRouter and RouterProvider for providing router & Outlet for children component for nested routing
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 
-// AppLayout component to render: Header, Outlet(it contain children component like body, About, Restaurant Menu etc) and Footer Component
 const AppLayout = () => {
     return (
         <React.Fragment>
@@ -20,14 +19,12 @@ const AppLayout = () => {
     );
 };
 
-// call createBrowserRouter for routing different pages
 const appRouter = createBrowserRouter([
     {
-        path: "/", // show path for routing
-        element: <AppLayout />, // show component for particular path
-        errorElement: <Error />, // show error component for path is different
+        path: "/",
+        element: <AppLayout />, 
+        errorElement: <Error />, 
         children: [
-            // show children component for routing
             {
                 path: "/",
                 element: <Body />,
